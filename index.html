@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flood Donet</title>
+
+  <!-- Google font CDN -->
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Daisy UI CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navBg: '#F9F7F3',
+            btnBG: '#B4F461'
+
+          },
+          fontFamily: {
+            Lexend: 'Lexend',
+
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+
+  </style>
+</head>
+
+
+<body class="font-Lexend ">
+  <header>
+    <!-- nav bar start -->
+    <nav class="bg-navBg py-5 mb-8">
+
+      <div class="flex items-center justify-between w-11/12 mx-auto ">
+        <button class=" btn font-bold text-xl ">Blog</button>
+        <button class="hidden">Home</button>
+        <p class="flex justify-center items-center gap-4 font-semibold text-xl"> <span><img src="assets/logo.png"
+              alt=""></span>
+          Donate Bangladesh</p>
+        <p class=" flex items-center justify-center gap-4 font-bold text-xl">
+          <img src="assets/coin.png" alt="">
+          5500 BDT
+
+        </p>
+      </div>
+
+    </nav>
+    <!-- nav bar end -->
+    <div class="flex items-center justify-center gap-5">
+      <div><button class="btn">Donation</button></div>
+      <div><button class="btn">History</button></div>
+    </div>
+  </header>
+  <!-- header End -->
+  <!-- main part start -->
+  <main>
+    <!-- donate for nowakhali -->
+    <section class="mt-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:w-10/12 mx-auto border-2 border-gray-100 rounded-lg p-5">
+        <div class=" h-[400px]"><img class="w-full h-full" src="assets/noakhali.png" alt=""></div>
+        <!-- dynamic button -->
+        <div><button class="btn mb-4"> <img src="assets/coin.png" alt="">0 BDT</button>
+          <h3 class="font-bold text-xl mb-4 text-black">Donate for Flood at Noakhali, Bangladesh</h3>
+          <p>The recent floods in Noakhali have caused significant damage to homes infrastructure. Your donation will
+            help provide
+            essential supplies and to those affected by this disaster. Every contribution, big or small, makes
+            difference. Please
+            join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+          <!-- dynamic -->
+          <input class="w-full p-5 mt-4 mb-4 bg-gray-100 rounded-md" type="text" placeholder="Write Donation Amount">
+          <!-- dynamic btn-2 -->
+          <button class="btn no-animation w-full text-center hover:bg-btnBG">Donate Now</button>
+        </div>
+      </div>
+      <!--  donate for Feni,Bangladesh -->
+
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:w-10/12 mx-auto border-2 border-gray-100 rounded-lg mt-8 p-5">
+        <div class=" h-[400px]"><img class="w-full h-full" src="assets/feni.png" alt=""></div>
+        <!-- dynamic button -->
+        <div><button class="btn mb-4"> <img src="assets/coin.png" alt="">0 BDT</button>
+          <h3 class="font-bold text-xl mb-4 text-black">Donate for Flood Relief in Feni,Bangladesh</h3>
+          <p>The recent floods in Noakhali have caused significant damage to homes infrastructure. Your donation will
+            help provide
+            essential supplies and to those affected by this disaster. Every contribution, big or small, makes
+            difference. Please
+            join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+          <!-- dynamic -->
+          <input class="w-full p-5 mt-4 mb-4 bg-gray-100 rounded-md" type="text" placeholder="Write Donation Amount">
+          <!-- dynamic btn-2 -->
+          <button class="btn no-animation w-full text-center hover:bg-btnBG">Donate Now</button>
+        </div>
+      </div>
+      <!-- Aid for Injured in the Quota Movement -->
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:w-10/12 mx-auto border-2 border-gray-100 rounded-lg mt-8 p-5">
+        <div class=" h-[400px]"><img class="w-full h-full" src="assets/quota-protest.png" alt=""></div>
+        <!-- dynamic button -->
+        <div><button class="btn mb-4"> <img src="assets/coin.png" alt="">0 BDT</button>
+          <h3 class="font-bold text-xl mb-4 text-black">Aid for Injured in the Quota Movement</h3>
+          <p>The recent floods in Noakhali have caused significant damage to homes infrastructure. Your donation will
+            help provide
+            essential supplies and to those affected by this disaster. Every contribution, big or small, makes
+            difference. Please
+            join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+          <!-- dynamic -->
+          <input class="w-full p-5 mt-4 mb-4 bg-gray-100 rounded-md" type="text" placeholder="Write Donation Amount">
+          <!-- dynamic btn-2 -->
+          <button class="btn no-animation w-full text-center hover:bg-btnBG">Donate Now</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="w-full h-28 bg-navBg mt-14"></footer>
+  <script src="JS/app.js"></script>
+</body>
+
+</html>
