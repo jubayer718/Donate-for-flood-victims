@@ -63,20 +63,20 @@
     </nav>
     <!-- nav bar end -->
     <div class="flex items-center justify-center gap-5">
-      <div><button class="btn">Donation</button></div>
-      <div><button class="btn">History</button></div>
+      <div><button id="donate-btn-main" class="btn">Donation</button></div>
+      <div><button id="history-btn" class="btn">History</button></div>
     </div>
   </header>
   <!-- header End -->
   <!-- main part start -->
   <main>
     <!-- donate for nowakhali -->
-    <section class="mt-10">
+    <section id="main-section" class="mt-10 ">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:w-10/12 mx-auto border-2 border-gray-100 rounded-lg p-5">
         <div class=" h-[400px]"><img class="w-full h-full" src="assets/noakhali.png" alt=""></div>
         <!-- dynamic button -->
         <div><button class="btn mb-4"> <img src="assets/coin.png" alt=""><span id="donate-total">0</span> BDT</button>
-          <h3 class="font-bold text-xl mb-4 text-black">Donate for Flood at Noakhali, Bangladesh</h3>
+          <h3 id="title" class="font-bold text-xl mb-4 text-black">Donate for Flood at Noakhali, Bangladesh</h3>
           <p>The recent floods in Noakhali have caused significant damage to homes infrastructure. Your donation will
             help provide
             essential supplies and to those affected by this disaster. Every contribution, big or small, makes
@@ -86,7 +86,9 @@
           <input id="input-field" class="w-full p-5 mt-4 mb-4 bg-gray-100 rounded-md" type="text"
             placeholder="Write Donation Amount">
           <!-- dynamic btn-2 -->
-          <button id="donate-btn-1" class="btn no-animation w-full text-center hover:bg-btnBG">Donate Now</button>
+          <button onclick="handleTransactionById1()" id="donate-btn-1"
+            class=" btn no-animation w-full text-center hover:bg-btnBG">Donate
+            Now</button>
         </div>
       </div>
       <!--  donate for Feni,Bangladesh -->
@@ -95,17 +97,19 @@
         class="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:w-10/12 mx-auto border-2 border-gray-100 rounded-lg mt-8 p-5">
         <div class=" h-[400px]"><img class="w-full h-full" src="assets/feni.png" alt=""></div>
         <!-- dynamic button -->
-        <div><button class="btn mb-4"> <img src="assets/coin.png" alt="">0 BDT</button>
-          <h3 class="font-bold text-xl mb-4 text-black">Donate for Flood Relief in Feni,Bangladesh</h3>
+        <div><button class="btn mb-4"> <img src="assets/coin.png" alt=""><span id="donate-total-2">0</span>BDT</button>
+          <h3 id="title-2" class="font-bold text-xl mb-4 text-black">Donate for Flood Relief in Feni,Bangladesh</h3>
           <p>The recent floods in Noakhali have caused significant damage to homes infrastructure. Your donation will
             help provide
             essential supplies and to those affected by this disaster. Every contribution, big or small, makes
             difference. Please
             join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
           <!-- dynamic -->
-          <input class="w-full p-5 mt-4 mb-4 bg-gray-100 rounded-md" type="text" placeholder="Write Donation Amount">
+          <input id="input-field-2" class="w-full p-5 mt-4 mb-4 bg-gray-100 rounded-md" type="text"
+            placeholder="Write Donation Amount">
           <!-- dynamic btn-2 -->
-          <button class="btn no-animation w-full text-center hover:bg-btnBG">Donate Now</button>
+          <button onclick="handleTransactionById2()" id="donate-btn-2"
+            class="btn no-animation w-full text-center hover:bg-btnBG">Donate Now</button>
         </div>
       </div>
       <!-- Aid for Injured in the Quota Movement -->
@@ -113,25 +117,32 @@
         class="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:w-10/12 mx-auto border-2 border-gray-100 rounded-lg mt-8 p-5">
         <div class=" h-[400px]"><img class="w-full h-full" src="assets/quota-protest.png" alt=""></div>
         <!-- dynamic button -->
-        <div><button class="btn mb-4"> <img src="assets/coin.png" alt="">0 BDT</button>
-          <h3 class="font-bold text-xl mb-4 text-black">Aid for Injured in the Quota Movement</h3>
+        <div><button class="btn mb-4"> <img src="assets/coin.png" alt=""><span id="donate-total-3">0</span>BDT</button>
+          <h3 id="title-3" class="font-bold text-xl mb-4 text-black">Aid for Injured in the Quota Movement</h3>
           <p>The recent floods in Noakhali have caused significant damage to homes infrastructure. Your donation will
             help provide
             essential supplies and to those affected by this disaster. Every contribution, big or small, makes
             difference. Please
             join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
           <!-- dynamic -->
-          <input class="w-full p-5 mt-4 mb-4 bg-gray-100 rounded-md" type="text" placeholder="Write Donation Amount">
+          <input id="input-field-3" class="w-full p-5 mt-4 mb-4 bg-gray-100 rounded-md" type="text"
+            placeholder="Write Donation Amount">
           <!-- dynamic btn-2 -->
-          <button class="btn no-animation w-full text-center hover:bg-btnBG">Donate Now</button>
+          <button onclick="handleTransactionById3()" id="donate-btn-3"
+            class="btn no-animation w-full text-center hover:bg-btnBG">Donate Now</button>
         </div>
       </div>
+
+      <!-- history part -->
     </section>
+    <div id="history" class="hidden">
+
+    </div>
   </main>
-  <footer class="w-full h-28 bg-navBg mt-14"></footer>
+  <footer class="w-full h-24 footer bg-navBg mt-14"></footer>
   <script src="JS/app.js"></script>
-  <script src="JS/utility.js"></script>
-  <script src="JS/home.js"></script>
+  <!-- <script src="JS/utility.js"></script>
+  <script src="JS/home.js"></script> -->
 </body>
 
 </html>
