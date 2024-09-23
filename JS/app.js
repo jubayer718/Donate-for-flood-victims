@@ -1,5 +1,5 @@
-document.getElementById('donate-btn-1').addEventListener('click', function (event) {
-  event.preventDefault();
+document.getElementById('donate-btn-1').addEventListener('click', function () {
+  
 
 
 
@@ -31,8 +31,8 @@ document.getElementById('donate-btn-1').addEventListener('click', function (even
 
 // card-2 add function
 
-document.getElementById('donate-btn-2').addEventListener('click', function (event) {
-  event.preventDefault();
+document.getElementById('donate-btn-2').addEventListener('click', function () {
+  
 
 
 
@@ -207,5 +207,13 @@ document.getElementById('donate-btn-main').addEventListener('click', function ()
   document.getElementById('history').classList.add('hidden');
   document.getElementById('history-btn').classList.remove('bg-btnBG');
   document.getElementById('donate-btn-main').classList.add('bg-btnBG');
-   document.querySelector('.footer').classList.remove('hidden');
+  document.querySelector('.footer').classList.remove('hidden');
+});
+
+document.getElementById('blog-btn').addEventListener('click', function () {
+  window.location.href='home.html'
 })
+
+// document.getElementById('blog-btn').addEventListener('click', function () {
+//   window.location.href='home.html'
+// })
