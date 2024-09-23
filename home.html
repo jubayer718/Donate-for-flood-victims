@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content text-lg="width=device-width, initial-scale=1.0">
   <!-- Daisy UI CDN -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
 
@@ -12,10 +12,79 @@
   <title>Home</title>
 </head>
 
-<body class="w-11/12 mx-auto mt-10">
-  <a href="index.html"><button id="home-btn" class="hover:bg-[#B4F461] home-btn btn">Home</button></a>
-  <script src="JS/home.js"></script>
+<body>
 
+
+  <nav class="bg-[#F9F7F3] py-5 mb-8">
+
+    <div class="flex items-center justify-between w-11/12 mx-auto ">
+
+      <a href="index.html"><button id="home-btn" class=" text-lg bg-[#B4F461] home-btn btn">Home</button></a>
+
+      <p class="flex justify-center items-center gap-4 font-semibold text-xl"> <span><img src="assets/logo.png"
+            alt=""></span>
+        Donate Bangladesh</p>
+      <p class=" flex items-center justify-center gap-4 font-bold text-xl">
+        <img src="assets/coin.png" alt="">
+        <span id="main-ballance">5500</span> BDT
+
+      </p>
+    </div>
+
+  </nav>
+
+  <main class="w-11/12 mx-auto ">
+    <h1 class="text-4xl font-extrabold mt-5 mb-5">Important FAQ </h1>
+    <!-- faq part -->
+
+
+    <div class="collapse collapse-arrow rounded-md  border-2  ">
+      <input type="radio" name="my-accordion-2" />
+      <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)</div>
+      <div class="collapse-content text-lg">
+        <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of
+          a document
+          as a tree of objects, where each node corresponds to a part of the document, such
+          as
+          elements, attributes, and text.</p>
+      </div>
+    </div>
+
+    <div class="collapse collapse-arrow rounded-md  border-2  ">
+      <input type="radio" name="my-accordion-2" />
+      <div class="collapse-title text-xl font-medium">How do you select an element from hte DOM</div>
+      <div class="collapse-content text-lg">
+        <p>Use document.querySelector() or document.getElementById(). ETC</p>
+      </div>
+    </div>
+
+
+    <div class="collapse collapse-arrow rounded-md  border-2  ">
+      <input type="radio" name="my-accordion-2" />
+      <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM , and why is it
+        useful?</div>
+      <div class="collapse-content text-lg">
+        <p>Event delegation is handling events on parent elements, improving performance and simplifying code by
+          reducing the
+          number of event listeners</p>
+      </div>
+    </div>
+
+
+
+    <div class="collapse collapse-arrow rounded-md  border-2  ">
+      <input type="radio" name="my-accordion-2" />
+      <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using hte
+        DOM?</div>
+      <div class="collapse-content text-lg">
+        <p>Use setAttribute(), getAttribute(), and style.property to manipulate attributes and styles in the DOM.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="w-full h-24 footer bg-[#F9F7F3] mt-14"></footer>
+  <script src="JS/home.js"></script>
 </body>
 
 </html>
