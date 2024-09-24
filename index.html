@@ -51,7 +51,7 @@
 
         <button id="blog-btn" class=" text-lg bg-btnBG home-btn btn">Blog</button>
 
-        <p class="flex justify-center items-center gap-4 font-semibold lg:text-xl"> <span><img class="w-10"
+        <p class="flex justify-center items-center gap-4 font-semibold lg:text-xl"> <span><img class="w-10 break"
               src="assets/logo.png" alt=""></span>
           Donate Bangladesh</p>
         <p class=" flex items-center justify-center gap-1 font-bold lg:text-xl">
@@ -113,6 +113,28 @@
             class="btn no-animation w-full text-center hover:bg-btnBG">Donate Now</button>
         </div>
       </div>
+
+
+      <!-- modal -->
+      <!-- Open the modal using ID.showModal() method -->
+      <div class="modal ">
+        <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+        <dialog id="my_modal_1" class="modal ">
+          <div class="modal-box">
+            <h3 id="modal-title" class="text-lg font-bold text-center mb-3">Congrates! <br>
+              <p class="flex items-center justify-center"> <img class="w-16" src="assets/coin.png" alt=""></p>
+            </h3>
+            <p id="modal-pg" class="py-4 text-center">You have donate for humankind <br> <span
+                class="font-bold text-center">successfully</span></p>
+            <div class="modal-action flex justify-center items-center">
+              <form method="dialog" class="text-center">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn bg-gray-100">Close Confirmation</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+      </div>
       <!-- Aid for Injured in the Quota Movement -->
       <div
         class="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:w-10/12 mx-auto border-2 border-gray-100 rounded-lg mt-8 p-5">
@@ -129,7 +151,8 @@
           <input id="input-field-3" class="w-full p-5 mt-4 mb-4 bg-gray-100 rounded-md" type="text"
             placeholder="Write Donation Amount">
           <!-- dynamic btn-2 -->
-          <button onclick="handleTransactionById3()" id="donate-btn-3"
+          <!-- onclick="handleTransactionById3() " -->
+          <button onclick="my_modal_1.showModal()" id="donate-btn-3"
             class="btn no-animation w-full text-center hover:bg-btnBG">Donate Now</button>
         </div>
       </div>
@@ -143,6 +166,7 @@
   <footer class="w-full h-24 footer bg-navBg mt-14"></footer>
   <script src="JS/app.js"></script>
   <script src="JS/home.js"></script>
+  <script src="JS/utilities.js"></script>
 </body>
 
 </html>

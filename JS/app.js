@@ -1,3 +1,7 @@
+
+
+
+
 document.getElementById('donate-btn-1').addEventListener('click', function () {
   
 
@@ -94,6 +98,9 @@ document.getElementById('donate-btn-3').addEventListener('click', function (even
 }
 
 )
+
+
+
 
 
 // history part start
@@ -214,3 +221,19 @@ document.getElementById('blog-btn').addEventListener('click', function () {
   window.location.href='home.html'
 })
 
+
+// modal part this function use many button
+
+document.getElementById('donate-btn-3').addEventListener('click', function () {
+  const Value = getInputValueById('input-field-3');
+  console.log(Value)
+  if (Number.isNaN(Value)) {
+    document.getElementById('modal-title').innerText;
+   document.getElementById('modal-title').innerText = 'ops! Donate field. Please try again.'
+    document.getElementById('modal-pg').classList.add('hidden');
+    
+  }
+
+  
+
+})
