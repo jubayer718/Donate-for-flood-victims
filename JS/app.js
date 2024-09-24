@@ -28,7 +28,7 @@ document.getElementById('donate-btn-1').addEventListener('click', function () {
 
 
   
-  
+ 
 }
 
 )
@@ -80,6 +80,9 @@ document.getElementById('donate-btn-3').addEventListener('click', function (even
     alert('faild to donate.Please try again.')
     return;
   }
+
+ 
+
   const newBallance = inputValue + addBallance;
   // decrease main ballance
     const mainBallance = parseFloat(document.getElementById('main-ballance').innerText);
@@ -93,7 +96,7 @@ document.getElementById('donate-btn-3').addEventListener('click', function (even
   document.getElementById('main-ballance').innerText = decreaseBallance;
 
 
-  
+  document.getElementById('donate-btn-3').showModal();
   
 }
 
@@ -108,7 +111,7 @@ document.getElementById('donate-btn-3').addEventListener('click', function (even
 
  
 
-function handleTransactionById1() {
+document.getElementById('donate-btn-1').addEventListener('click',function handleTransactionById1() {
   
   
 
@@ -117,6 +120,11 @@ const h2innerText = document.getElementById('title').innerText;
  
   const inputValue = document.getElementById('input-field').value;
   
+  if (isNaN(inputValue)) {
+   
+    return;
+  }
+  
 const transaction = document.getElementById('history')
    const historyItem = document.createElement('div');
   historyItem.className = "w-11/12 mt-5 mx-auto bg-gray-100 h-20 p-3 rounded-md border-2 border-gray-200 "
@@ -135,20 +143,26 @@ const transaction = document.getElementById('history')
   
   transaction.insertBefore(historyItem, transaction.firstChild);
 }
- 
+)
 
 
 
 
 // history for card 2
-function handleTransactionById2() {
+document.getElementById('donate-btn-2').addEventListener('click',function handleTransactionById2() {
   
   
 
+  
 
 const h2innerText = document.getElementById('title-2').innerText;
  
   const inputValue = document.getElementById('input-field-2').value;
+  
+  if (isNaN(inputValue)) {
+   
+    return;
+  }
   
 const transaction = document.getElementById('history')
    const historyItem = document.createElement('div');
@@ -167,13 +181,13 @@ const transaction = document.getElementById('history')
   `;
   
   transaction.insertBefore(historyItem, transaction.firstChild);
-}
+})
  
 // history card 3
 
 
 
-function handleTransactionById3() {
+document.getElementById('donate-btn-3').addEventListener('click', function handleTransactionById3(event) {
   
   
 
@@ -181,7 +195,12 @@ function handleTransactionById3() {
 const h2innerText = document.getElementById('title-3').innerText;
  
   const inputValue = document.getElementById('input-field-3').value;
+  if (isNaN(inputValue)) {
+   
+    return;
+  }
   
+
 const transaction = document.getElementById('history')
    const historyItem = document.createElement('div');
   historyItem.className = "w-11/12 mt-5 mx-auto bg-gray-100 h-20 p-3 rounded-md border-2 border-gray-200 "
@@ -199,7 +218,11 @@ const transaction = document.getElementById('history')
   `;
   
   transaction.insertBefore(historyItem, transaction.firstChild);
-}
+
+  // modal
+
+ 
+})
  
 document.getElementById('history-btn').addEventListener('click', function(){
   document.getElementById('main-section').classList.add('hidden');
@@ -224,15 +247,33 @@ document.getElementById('blog-btn').addEventListener('click', function () {
 
 // modal part this function use many button
 
+// for card -1
+document.getElementById('donate-btn-1').addEventListener('click', function () {
+   const Value = getInputValueById('input-field');
+
+  if (Number.isNaN(Value)) {
+
+    window.location.reload();
+  } 
+})
+// for card - 2
+document.getElementById('donate-btn-2').addEventListener('click', function () {
+   const Value = getInputValueById('input-field-2');
+
+  if (Number.isNaN(Value)) {
+
+    window.location.reload();
+  } 
+})
+
+// for card -3
 document.getElementById('donate-btn-3').addEventListener('click', function () {
   const Value = getInputValueById('input-field-3');
-  console.log(Value)
+
   if (Number.isNaN(Value)) {
-    document.getElementById('modal-title').innerText;
-   document.getElementById('modal-title').innerText = 'ops! Donate field. Please try again.'
-    document.getElementById('modal-pg').classList.add('hidden');
-    
-  }
+
+    window.location.reload();
+  } 
 
   
 

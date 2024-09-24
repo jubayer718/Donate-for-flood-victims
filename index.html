@@ -43,9 +43,9 @@
 
 
 <body class="font-Lexend ">
-  <header>
+  <header class=" sticky top-0 z-10 border border-b-2 pb-5 backdrop-blur-lg">
     <!-- nav bar start -->
-    <nav class="bg-navBg py-5 mb-8">
+    <nav class="bg-navBg  py-5 mb-8">
 
       <div class="flex items-center justify-between w-11/12 mx-auto ">
 
@@ -87,7 +87,7 @@
           <input id="input-field" class="w-full p-5 mt-4 mb-4 bg-gray-100 rounded-md" type="text"
             placeholder="Write Donation Amount">
           <!-- dynamic btn-2 -->
-          <button onclick="handleTransactionById1()" id="donate-btn-1"
+          <button onclick="my_modal_1.showModal()" id="donate-btn-1"
             class=" btn no-animation w-full text-center hover:bg-btnBG">Donate
             Now</button>
         </div>
@@ -109,7 +109,7 @@
           <input id="input-field-2" class="w-full p-5 mt-4 mb-4 bg-gray-100 rounded-md" type="text"
             placeholder="Write Donation Amount">
           <!-- dynamic btn-2 -->
-          <button onclick="handleTransactionById2()" id="donate-btn-2"
+          <button onclick="my_modal_1.showModal()" id="donate-btn-2"
             class="btn no-animation w-full text-center hover:bg-btnBG">Donate Now</button>
         </div>
       </div>
@@ -117,7 +117,7 @@
 
       <!-- modal -->
       <!-- Open the modal using ID.showModal() method -->
-      <div class="modal ">
+      <div id="modal " class="modal ">
         <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
         <dialog id="my_modal_1" class="modal ">
           <div class="modal-box">
@@ -151,7 +151,7 @@
           <input id="input-field-3" class="w-full p-5 mt-4 mb-4 bg-gray-100 rounded-md" type="text"
             placeholder="Write Donation Amount">
           <!-- dynamic btn-2 -->
-          <!-- onclick="handleTransactionById3() " -->
+
           <button onclick="my_modal_1.showModal()" id="donate-btn-3"
             class="btn no-animation w-full text-center hover:bg-btnBG">Donate Now</button>
         </div>
